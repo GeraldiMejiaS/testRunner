@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Where
-        run: cd C:\apps\
+        run: cd C:\apps\ ; ls
       - name: show
         run: ls
