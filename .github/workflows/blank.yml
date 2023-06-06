@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: show
         run: dir
-      - name: show3
+      - name: Stop sites in IIS
         run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites.bat"
+      - name: Start sites in IIS
+        run: cmd.exe /c "C:\apps\e2f-stag\start-all-sites.bat"
 
