@@ -38,3 +38,5 @@ jobs:
         run: cd C:\apps\ ; ls
       - name: show
         run: ls
+      - name: show2
+        run: '%windir%\syswow64\inetsrv\appcmd stop site "rtsol.e2f.stg.vorealis.com"'
