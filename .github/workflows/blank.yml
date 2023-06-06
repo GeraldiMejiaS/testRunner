@@ -28,4 +28,4 @@ jobs:
       - name: show
         run: ls
       - name: show2
-        run: cd C:\apps\e2f-stag\ ; stop-all-sites-execute.lnk
+        run: cd C:\apps\e2f-stag\ ; cmd.exe /c "stop-all-sites-execute.lnk"
