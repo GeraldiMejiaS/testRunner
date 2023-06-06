@@ -25,13 +25,13 @@ jobs:
       - name: Make Pull from github repository
         run: cmd.exe /c "C:\apps\e2f-stag\make-pull.bat"
       - name: Generar pract
-        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_pract.bat
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_pract.bat"
       - name: Generar prsol
-        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_prsol.bat
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_prsol.bat"
       - name: Generar rtcal
-        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtcal.bat
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtcal.bat"
       - name: Generar rtso
-        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtsol.bat
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtsol.bat"
       - name: Start sites in IIS
         run: cmd.exe /c "C:\apps\e2f-stag\start-all-sites.bat"
       - name: Despliegue completado en staging
