@@ -29,3 +29,5 @@ jobs:
         run: ls
       - name: show2
         run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites-execute.lnk"
+      - name: show3
+        run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites.bat"
