@@ -1,10 +1,7 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push or pull request events but only for the "staging" 
   push:
     branches: [ "staging" ]
   pull_request:
@@ -13,19 +10,29 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: self-hosted
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+jobs:
+  
+  build:
+    
+    runs-on: self-hosted
+    
     steps:
       - name: show
         run: dir
       - name: Stop sites in IIS
         run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites.bat"
+      - name: Make Pull from github repository
+        run: cmd.exe /c "C:\apps\e2f-stag\make-pull.bat"
+      - name: Generar pract
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_pract.bat
+      - name: Generar prsol
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_prsol.bat
+      - name: Generar rtcal
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtcal.bat
+      - name: Generar rtso
+        run: cmd.exe /c "C:\apps\e2f-stag\stag-generar_rtsol.bat
       - name: Start sites in IIS
         run: cmd.exe /c "C:\apps\e2f-stag\start-all-sites.bat"
-
+      - name: Despliegue completado en staging
+        run: echo "Despligue completo
