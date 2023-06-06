@@ -39,4 +39,8 @@ jobs:
       - name: show
         run: ls
       - name: show2
-        run: '%windir%\syswow64\inetsrv\appcmd stop site "rtsol.e2f.stg.vorealis.com"'
+        run: |
+          $username = "gmejia"
+          $password = ConvertTo-SecureString "Vorealis1a*" -AsPlainText -Force
+          $credential = New-Object System.Management.Automation.PSCredential($username, $password)
+          Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"%windir%\syswow64\inetsrv\appcmd stop site `"rtsol.e2f.stg.vorealis.com`"`"" -Credential $credential
