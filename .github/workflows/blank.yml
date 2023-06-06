@@ -41,6 +41,6 @@ jobs:
       - name: show2
         run: |
           $username = "gmejia"
-          $password = ConvertTo-SecureString "Vorealis1a*" -AsPlainText -Force
+          $password = ConvertTo-SecureString "Vorealis123*" -AsPlainText -Force
           $credential = New-Object System.Management.Automation.PSCredential($username, $password)
           Start-Process -FilePath "cmd.exe" -ArgumentList "/c `"%windir%\syswow64\inetsrv\appcmd stop site `"rtsol.e2f.stg.vorealis.com`"`"" -Credential $credential
