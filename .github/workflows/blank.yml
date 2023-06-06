@@ -35,4 +35,4 @@ jobs:
       - name: Start sites in IIS
         run: cmd.exe /c "C:\apps\e2f-stag\start-all-sites.bat"
       - name: Despliegue completado en staging
-        run: echo "Despligue completo
+        run: echo "Despligue completo"
