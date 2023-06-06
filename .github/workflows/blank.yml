@@ -23,11 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: show
-        run: ls
-      - name: show2
-        run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites-execute.lnk"
+        run: dir
       - name: show3
         run: cmd.exe /c "C:\apps\e2f-stag\stop-all-sites.bat"
-      - name: show4
-        run: '%windir%\syswow64\inetsrv\appcmd start site "misitio"'
 
